@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutX="27.0" layoutY="51.0" prefHeight="188.0" prefWidth="65.0" spacing="17.0">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Title" />
+            <Label text="Author" />
+            <Label text="Year" />
+            <Label text="Pages" />
+         </children>
+      </VBox>
+      <VBox layoutX="93.0" layoutY="48.0" prefHeight="184.0" prefWidth="276.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfid" />
+            <TextField fx:id="tftitle" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="tfauthor" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="tfyear" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="tfpages" layoutX="10.0" layoutY="85.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvbooks" layoutX="390.0" layoutY="46.0" onMouseClicked="#handleMouseAction" prefHeight="325.0" prefWidth="394.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="coltitle" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="colauthor" prefWidth="84.0" text="Author" />
+            <TableColumn fx:id="colyear" prefWidth="77.0" text="Year" />
+            <TableColumn fx:id="colpages" prefWidth="82.0" text="Pages" />
+        </columns>
+      </TableView>
+      <Button fx:id="btninsert" layoutX="101.0" layoutY="287.0" mnemonicParsing="false" onAction="#handlebutton" prefHeight="25.0" prefWidth="85.0" text="Insert" />
+      <Button fx:id="btnupdate" layoutX="196.0" layoutY="287.0" mnemonicParsing="false" onAction="#handlebutton" prefHeight="25.0" prefWidth="85.0" text="Update" />
+      <Button fx:id="btndelete" layoutX="291.0" layoutY="287.0" mnemonicParsing="false" onAction="#handlebutton" prefHeight="25.0" prefWidth="86.0" text="Delete" />
+   </children>
+</AnchorPane>
